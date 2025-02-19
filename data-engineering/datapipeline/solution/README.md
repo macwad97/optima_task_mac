@@ -31,6 +31,8 @@ python main.py
 ```
 
 To run the script with specific positions and years:
+1. Positions: Default value is 1 to satisfy requirements. This can however be ran to return results for any position/ mix (Although in the current setup it doesn't output position to stick to requirements)
+2. Years: Default value is None, this means it will run for all available years. However, the user can specify a year or years to run for.
 
 ```sh
 python main.py --positions 1 2 3 --years 2021 2022
@@ -44,5 +46,16 @@ The script processes race results by:
 2. Preparing the race and result data.
 3. Combining the race and result data.
 4. Sorting and filtering the data.
-5. Outputting the results to JSON.
+5. Outputting the yearly results to JSON.
+
+## Consideratons for cloud deployment
+
+1. Data storage & ingestion: The CSV inputs will need to be ingested into a cloud provider such as AWS or Azure.
+2. Data processing playform: Once the data is stored in the cloud, it needs to be interacted with. A platform such as databricks is ideal for this. The repo can then be cloned into a gitfolder in databricks.
+3. Workflows & Triggers: Set up a workflow & define the required cluster, decide on a trigger/ notification setup that will run the workflow.
+4. Data accerss: How does the user wanrt to access the resulting JSON files?
+5. Scalability: Spark dataframes can work with large datasets more effectively, consider switching to this in a cloud enviroment.
+6. Cost management: Monitor and optimise reasource usage.
+7. Unit testing: Implement unit testing to test specific methods in isolation.
+8. Security: Ensure correct access levels.
 
