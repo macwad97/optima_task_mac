@@ -7,6 +7,7 @@ This project processes race results and outputs them to JSON files. The main scr
 - [Installation](#installation)
 - [Usage](#usage)
 - [Code Description](#code-description)
+- [Consideratons for cloud deployment](#Consideratons-for-cloud-deployment)
 
 ## Installation
 
