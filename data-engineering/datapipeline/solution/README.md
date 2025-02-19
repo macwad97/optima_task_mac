@@ -4,10 +4,18 @@ This project processes race results and outputs them to JSON files. The main scr
 
 ## Table of Contents
 
+- [Requirements met](#requirements-met)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Code Description](#code-description)
-- [Consideratons for cloud deployment](#Consideratons-for-cloud-deployment)
+- [Consideratons for cloud deployment](#consideratons-for-cloud-deployment)
+
+## Requirements met
+1. Produce JSON files in the required structure
+2. A file for each year available int he data
+3. Create datetime column
+4. Where time isn't available in `races.csv`, use `00:00:00`
+5. Winner of each race output to an element in the JSON file.
 
 ## Installation
 
